@@ -2,4 +2,4 @@
 
 alt-gravity firmware download page.
 
-[https://awonak.github.com/alt-gravity](https://awonak.github.com/alt-gravity)
+[https://awonak.github.io/alt-gravity/](https://awonak.github.io/alt-gravity/)
