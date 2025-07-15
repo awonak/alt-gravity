@@ -1,4 +1,28 @@
 <script src="https://github.com/dbuezas/arduino-web-uploader/releases/download/v1.0.0/main.js"></script>
+<script>
+  // Get references to the dropdown and the upload button
+  const fileSelect = document.getElementById('file-select');
+  const uploadButton = document.getElementById('upload-button');
+
+  // Listen for changes on the dropdown
+  fileSelect.addEventListener('change', (event) => {
+      // Get the selected file path from the dropdown's value
+      const selectedFile = event.target.value;
+      
+      // Update the 'hex-href' attribute on the button
+      uploadButton.setAttribute('hex-href', selectedFile);
+      
+      console.log(`Button updated to upload: ${selectedFile}`);
+  });
+
+  // On page load, read the first option's value and set it as the initial hex-href
+  document.addEventListener('DOMContentLoaded', () => {
+      const initialFile = fileSelect.value;
+      uploadButton.setAttribute('hex-href', initialFile);
+      console.log(`Initial button set to upload: ${initialFile}`);
+  });
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKDQSCFEDF"></script>
 <script>

@@ -1,6 +1,5 @@
 +++
 date = '2025-07-13T09:38:41-07:00'
-draft = false
 title = ''
 +++
 
@@ -56,5 +55,25 @@ CV2:
      External analog input used to provide modulation to any channel parameter.
 ```
 
-{{< firmware_button hex="Gravity" buttonText="Flash Alt Gravity Firmware" >}}
 
+{{< firmware_dropdown >}}
+
+```
+NOTE: Make sure your Gravity module is disconnected from
+the eurorack power and the MIDI expander before flashing.
+```
+
+
+## Feedback
+
+This is a beta release which may contain bugs, or have room for improvement.
+Your feedback is crutial to help ensure the new firmware is well received when
+it is officially published. We need your help to make this a success!
+
+You can help by submitting GitHub issues [here](https://github.com/awonak/alt-gravity/issues)
+for bug reports, feedback, or any ideas you've got. 
+
+https://github.com/awonak/alt-gravity/issues
+
+If you don't want to submit feedback on the public GitHub site, feel free to
+shoot me an email at adam.wonak@gmail.com.
