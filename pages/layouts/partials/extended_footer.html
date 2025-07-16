@@ -3,15 +3,24 @@
   // Get references to the dropdown and the upload button
   const fileSelect = document.getElementById('file-select');
   const uploadButton = document.getElementById('upload-button');
+  const progressEl = uploadButton.querySelector('.upload-progress');
 
   // Listen for changes on the dropdown
   fileSelect.addEventListener('change', (event) => {
+      progressEl.innerHTML = '';
+
       // Get the selected file path from the dropdown's value
       const selectedFile = event.target.value;
       
       // Update the 'hex-href' attribute on the button
       uploadButton.setAttribute('hex-href', selectedFile);
-      
+
+      if (selectedFile.includes('oldBootloader')) {
+          uploadButton.setAttribute('board', 'nanoOldBootloader');
+      } else {
+          uploadButton.setAttribute('board', 'nano');
+      }
+
       console.log(`Button updated to upload: ${selectedFile}`);
   });
 
