@@ -5,7 +5,7 @@ title = ''
 
 # ALT Firmware for Sitka Instruments Gravity
 
-This is a collection of alt firmware made for Sitka Instruments Gravity
+This is a collection of alt firmware made for [Sitka Instruments Gravity](https://sitkainstruments.com/gravity/)
 using the forthcomming `libGravity` library. This library helps make writing
 firmware easier by abstracting away the initialization and peripheral
 interactions. Now your firmware code can just focus on the logic and behavior
