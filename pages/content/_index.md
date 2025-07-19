@@ -63,6 +63,11 @@ NOTE: Make sure your Gravity module is disconnected from
 the eurorack power and the MIDI expander before flashing.
 ```
 
+```
+WARNING: Flashing this firmware will erase any saved data
+from your previously installed firmware!
+```
+
 
 ## Feedback
 
