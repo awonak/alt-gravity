@@ -46,8 +46,8 @@ BTN2:
      Shift: hold and rotate encoder to change current selected output channel.
 
 EXT:
-     External clock input. When Gravity is set to INTERNAL clock mode, this
-     input is used to reset clocks.
+     External clock input. When Gravity is set to INTERNAL or MIDI clock
+     source, this input is used to reset clocks.
 
 CV1:
      External analog input used to provide modulation to any channel parameter.
