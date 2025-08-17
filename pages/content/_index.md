@@ -6,11 +6,13 @@ title = ''
 # ALT Firmware for Sitka Instruments Gravity
 
 This is a collection of alt firmware made for [Sitka Instruments Gravity](https://sitkainstruments.com/gravity/)
-using the forthcomming `libGravity` library. This library helps make writing
-firmware easier by abstracting away the initialization and peripheral
-interactions. Now your firmware code can just focus on the logic and behavior
-of the app, and keep the low level code neatly tucked away in this library.
+using the open source [`libGravity`](https://git.sitkainstruments.com/awonak/libGravity)
+library. This library helps make writing firmware easier by abstracting away
+the initialization and peripheral interactions. Now your firmware code can
+just focus on the logic and behavior of the app, and keep the low level code
+neatly tucked away in this library.
 
+https://git.sitkainstruments.com/awonak/libGravity
 
 ## ALT-GRAVITY
 
@@ -68,17 +70,16 @@ WARNING: Flashing this firmware will erase any saved data
 from your previously installed firmware!
 ```
 
-
 ## Feedback
 
 This is a beta release which may contain bugs, or have room for improvement.
 Your feedback is crutial to help ensure the new firmware is well received when
 it is officially published. We need your help to make this a success!
 
-You can help by submitting GitHub issues [here](https://github.com/awonak/alt-gravity/issues)
+You can help by submitting Gitea issues [here](https://git.sitkainstruments.com/awonak/libGravity/issues)
 for bug reports, feedback, or any ideas you've got. 
 
-https://github.com/awonak/alt-gravity/issues
+https://git.sitkainstruments.com/awonak/libGravity/issues
 
-If you don't want to submit feedback on the public GitHub site, feel free to
+If you don't want to submit feedback on the public Gitea site, feel free to
 shoot me an email at adam.wonak@gmail.com.
