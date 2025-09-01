@@ -1,11 +1,16 @@
 <fieldset style="padding:60px; margin-bottom:20px; width:100%">
 
 <select id="file-select" name="files" style="max-width: 380px;">
-    <!-- The value should be the path to your hex file -->
-    <option value="{{ .Site.BaseURL }}/releases/Gravity.v2.0.0.hex">Alt Gravity Firmware - v2.0.0</option>
-    <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v2.0.0.hex">Alt Gravity Firmware - v2.0.0 (old bootloader)</option>
-    <option value="{{ .Site.BaseURL }}/releases/Gravity.v1.1.2.hex">Gravity Firmware - v1.1.2</option>
-    <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v1.1.2.hex">Gravity Firmware - v1.1.2 (old bootloader)</option>
+    <optgroup label="Alt Gravity">
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.v2.0.0.hex">Alt Gravity Firmware - v2.0.0</option>
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v2.0.0.hex">Alt Gravity Firmware - v2.0.0 (old bootloader)</option>
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.v2.0.0beta4.hex">Alt Gravity Firmware - v2.0.0beta4</option>
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v2.0.0beta4.hex">Alt Gravity Firmware - v2.0.0beta4 (old bootloader)</option>
+    </optgroup>
+    <optgroup label="Original Gravity">
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.v1.1.2.hex">Gravity Firmware - v1.1.2</option>
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v1.1.2.hex">Gravity Firmware - v1.1.2 (old bootloader)</option>
+    </optgroup>
 </select>
 
 <button style="width: auto;"
