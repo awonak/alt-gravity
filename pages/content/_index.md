@@ -14,6 +14,25 @@ neatly tucked away in this library.
 
 https://git.sitkainstruments.com/awonak/libGravity
 
+
+{{< firmware_dropdown >}}
+
+```
+NOTE: Make sure your Gravity module is disconnected from
+the eurorack power and the MIDI expander before flashing.
+```
+
+```
+WARNING: Flashing this firmware will erase any saved data
+from your previously installed firmware!
+```
+
+```
+KNOWN ISSUES: The current version of the firmware uses a
+majority of the available 2 KB  of SDRAM and this causes
+the firmware to freeze under certain high usage scenarios.
+```
+
 ## ALT-GRAVITY
 
 This version of Gravity firmware is a full rewrite that leverages the
@@ -55,19 +74,6 @@ CV1:
      External analog input used to provide modulation to any channel parameter.
 CV2:
      External analog input used to provide modulation to any channel parameter.
-```
-
-
-{{< firmware_dropdown >}}
-
-```
-NOTE: Make sure your Gravity module is disconnected from
-the eurorack power and the MIDI expander before flashing.
-```
-
-```
-WARNING: Flashing this firmware will erase any saved data
-from your previously installed firmware!
 ```
 
 ## Feedback
