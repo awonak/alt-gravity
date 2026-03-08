@@ -27,12 +27,6 @@ WARNING: Flashing this firmware will erase any saved data
 from your previously installed firmware!
 ```
 
-```
-KNOWN ISSUES: The current version of the firmware uses a
-majority of the available 2 KB  of SDRAM and this causes
-the firmware to freeze under certain high usage scenarios.
-```
-
 ## ALT-GRAVITY
 
 This version of Gravity firmware is a full rewrite that leverages the
@@ -50,8 +44,6 @@ The Gravity firmware is a slightly different implementation of the original
 firmware. There are a few notable changes; the internal clock operates at
 96 PPQN instead of the original 24 PPQN, which allows for more granular
 quantization of features like duty cycle (pulse width) or offset.
-Additionally, this firmware replaces the sequencer with a Euclidean Rhythm
-generator.
 
 {{< youtube BWwTnOQUQrQ >}}
 
