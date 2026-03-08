@@ -1,9 +1,8 @@
 +++
-date = '2025-07-13T09:38:41-07:00'
-title = ''
-+++
+title= "ALT Firmware for Sitka Instruments Gravity"
+layout= "single"
 
-# ALT Firmware for Sitka Instruments Gravity
++++
 
 This is a collection of alt firmware made for [Sitka Instruments Gravity](https://sitkainstruments.com/gravity/)
 using the open source [`libGravity`](https://git.sitkainstruments.com/awonak/libGravity)
@@ -73,14 +72,11 @@ CV2:
 
 The Euclidean firmware is an alternative sequencer for the Gravity module that
 generates polyrhythmic Euclidean rhythms instead of traditional linear 
-sequences. It leverages an internal 96 PPQN clock to provide high-resolution 
-control over quantization, duty cycles, and swing. The firmware features a 
-powerful modulation matrix where the dual CV inputs can be freely assigned per 
-channel to dynamically modulate clock divisions/multiplications, Euclidean 
-steps, or the number of hits in real-time. It also includes an advanced menu 
-system accessible via the encoder and buttons, allowing control over playback, 
-muting, clock routing, external sync, and saving/loading patterns and settings 
-to hardware EEPROM slots.
+sequences. The dual CV inputs can be assigned per  channel to dynamically
+modulate clock divisions/multiplications, Euclidean steps, or the number of
+hits in real-time. It also includes a menu system accessible via the encoder
+and buttons, allowing control over playback, muting, clock routing, external
+sync, and saving/loading patterns and settings to hardware EEPROM slots.
 
 ```yaml
 ENCODER:
@@ -112,11 +108,12 @@ windows spanning a -5V to +5V bounds. You can quickly toggle between adjusting
 the Shift and Size of either comparator using the buttons and rotary encoder.
 The module provides six distinct logic outputs based on the voltage
 windows: individual Gates for each comparator, combined boolean logic
-(AND, OR, XOR), and a Flip-Flop state. Additionally, it features an
-interactive, EEPROM-backed CV calibration mode for accurate voltage tracking
-and automatically saves your UI parameters to resume your exact settings across
-power cycles.
+(AND, OR, XOR), and a Flip-Flop state. 
 
+Additionally, when pressing both buttons, the module enters CV calibration mode
+for improving the accuracy of the input's voltage tracking. Exiting calibration
+mode automatically saves your calibration settings and will persist across power
+cycles.
 
 ```yaml
 CV1:
@@ -127,7 +124,10 @@ CV2:
 BTN1:
      Toggles between editing Comparator 1 and Comparator 2 values.
 BTN2: 
-     Toggles the active parameter between the Shift and Size of the selected Comparator window.
+     Toggles the active parameter between the Shift and Size of the selected 
+     Comparator window.
+BTN1 + BTN2:
+     Switch between Comparator mode and CV input calibration mode.
 
 CH 1 (Gate 1): 
      Outputs +5V while CV 1 is actively inside Comparator 1's bounds.
@@ -138,9 +138,10 @@ CH 3 (AND Logic):
 CH 4 (OR Logic): 
      Outputs +5V when either Gate 1 OR Gate 2 (or both) are active.
 CH 5 (XOR Logic): 
-     Outputs +5V exclusively when either Gate 1 or Gate 2, but not both, are active.
+     Outputs +5V exclusively when either Gate 1 or Gate 2, but not both, 
+     are active.
 CH 6 (Flip-Flop Logic): 
-     A Set-Reset logic latch. The output goes high on the rising edge of Gate 1 (Set), and goes low on the rising edge of Gate 2 (Reset).
+     Rising edges of the XOR signal toggle the flip-flop on or off.
 
 ```
 
