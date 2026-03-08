@@ -68,6 +68,83 @@ CV2:
      External analog input used to provide modulation to any channel parameter.
 ```
 
+
+## Euclidean
+
+The Euclidean firmware is an alternative sequencer for the Gravity module that
+generates polyrhythmic Euclidean rhythms instead of traditional linear 
+sequences. It leverages an internal 96 PPQN clock to provide high-resolution 
+control over quantization, duty cycles, and swing. The firmware features a 
+powerful modulation matrix where the dual CV inputs can be freely assigned per 
+channel to dynamically modulate clock divisions/multiplications, Euclidean 
+steps, or the number of hits in real-time. It also includes an advanced menu 
+system accessible via the encoder and buttons, allowing control over playback, 
+muting, clock routing, external sync, and saving/loading patterns and settings 
+to hardware EEPROM slots.
+
+```yaml
+ENCODER:
+     Press: change between selecting a parameter and editing the parameter.
+     Hold & Rotate: change current selected output channel.
+
+BTN1:
+     Play/pause: start or stop the internal clock.
+
+BTN2: 
+     Shift: hold and rotate encoder to change current selected output channel.
+
+EXT:
+     External clock input. When Gravity is set to INTERNAL or MIDI clock
+     source, this input is used to reset clocks.
+
+CV1:
+     External analog input used to provide modulation to any channel parameter.
+CV2:
+     External analog input used to provide modulation to any channel parameter.
+```
+
+## Comparator
+
+The Comparator firmware transforms the Gravity module into an audio-rate 
+dual-window comparator for analyzing CV signals. It utilizes CV1 and CV2 
+as separate inputs, offering an intuitive OLED visualization of both comparator
+windows spanning a -5V to +5V bounds. You can quickly toggle between adjusting
+the Shift and Size of either comparator using the buttons and rotary encoder.
+The module provides six distinct logic outputs based on the voltage
+windows: individual Gates for each comparator, combined boolean logic
+(AND, OR, XOR), and a Flip-Flop state. Additionally, it features an
+interactive, EEPROM-backed CV calibration mode for accurate voltage tracking
+and automatically saves your UI parameters to resume your exact settings across
+power cycles.
+
+
+```yaml
+CV1:
+     Analog input for Comparator 1 in the range of -5V to +5V.
+CV2:
+     Analog input for Comparator 2 in the range of -5V to +5V.
+
+BTN1:
+     Toggles between editing Comparator 1 and Comparator 2 values.
+BTN2: 
+     Toggles the active parameter between the Shift and Size of the selected Comparator window.
+
+CH 1 (Gate 1): 
+     Outputs +5V while CV 1 is actively inside Comparator 1's bounds.
+CH 2 (Gate 2): 
+     Outputs +5V while CV 2 is actively inside Comparator 2's bounds.
+CH 3 (AND Logic): 
+     Outputs +5V only when Gate 1 AND Gate 2 are active simultaneously.
+CH 4 (OR Logic): 
+     Outputs +5V when either Gate 1 OR Gate 2 (or both) are active.
+CH 5 (XOR Logic): 
+     Outputs +5V exclusively when either Gate 1 or Gate 2, but not both, are active.
+CH 6 (Flip-Flop Logic): 
+     A Set-Reset logic latch. The output goes high on the rising edge of Gate 1 (Set), and goes low on the rising edge of Gate 2 (Reset).
+
+```
+
+
 ## Feedback
 
 This is a beta release which may contain bugs, or have room for improvement.
