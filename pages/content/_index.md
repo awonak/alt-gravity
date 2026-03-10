@@ -101,7 +101,7 @@ CV2:
 
 ## Comparator
 
-The Comparator firmware transforms the Gravity module into an audio-rate 
+The Comparator firmware transforms the Gravity module into a CV rate 
 dual-window comparator for analyzing CV signals. It utilizes CV1 and CV2 
 as separate inputs, offering an intuitive OLED visualization of both comparator
 windows spanning a -5V to +5V bounds. You can quickly toggle between adjusting
