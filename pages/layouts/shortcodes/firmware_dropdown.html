@@ -2,22 +2,23 @@
 
 <select id="file-select" name="files" style="max-width: 380px;">
     <optgroup label="Alt Gravity">
-        <option value="{{ .Site.BaseURL }}/releases/Gravity.v2.0.1beta1.hex">Alt Gravity Firmware - v2.0.1beta1</option>
-        <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v2.0.1beta1.hex">Alt Gravity Firmware - v2.0.1beta1 (old bootloader)</option>
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.v2.1.0.hex">Alt Gravity Firmware - v2.1.0</option>
+        <option value="{{ .Site.BaseURL }}/releases/Gravity.oldBootloader.v2.1.0.hex">Alt Gravity Firmware - v2.1.0 (old bootloader)</option>
     </optgroup>
     <optgroup label="Euclidean">
-        <option value="{{ .Site.BaseURL }}/releases/Euclidean.v2.0.1beta1.hex">Euclidean Firmware - v2.0.1beta1</option>
-        <option value="{{ .Site.BaseURL }}/releases/Euclidean.oldBootloader.v2.0.1beta1.hex">Euclidean Firmware - v2.0.1beta1 (old bootloader)</option>
+        <option value="{{ .Site.BaseURL }}/releases/Euclidean.v2.1.0.hex">Euclidean Firmware - v2.1.0</option>
+        <option value="{{ .Site.BaseURL }}/releases/Euclidean.oldBootloader.v2.1.0.hex">Euclidean Firmware - v2.1.0 (old bootloader)</option>
     </optgroup>
     <optgroup label="Comparator">
-        <option value="{{ .Site.BaseURL }}/releases/Comparator.hex">Comparator Firmware - alpha2</option>
+        <option value="{{ .Site.BaseURL }}/releases/Comparator.v2.1.0.hex">Comparator Firmware - v2.1.0</option>
+        <option value="{{ .Site.BaseURL }}/releases/Comparator.oldBootloader.v2.1.0.hex">Comparator Firmware - v2.1.0 (old bootloader)</option>
     </optgroup>
 </select>
 
 <button style="width: auto;"
     id="upload-button"
     arduino-uploader
-    hex-href="{{ .Site.BaseURL }}/releases/Gravity.v2.0.1beta1.hex"
+    hex-href="{{ .Site.BaseURL }}/releases/Gravity.v2.1.0.hex"
     board="nano"
     verify
     port-filters='[{"usbProductId":46388,"usbVendorId":1241}]'
