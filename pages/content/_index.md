@@ -115,6 +115,8 @@ for improving the accuracy of the input's voltage tracking. Exiting calibration
 mode automatically saves your calibration settings and will persist across power
 cycles.
 
+{{< youtube eGmMma-BIGo >}}
+
 ```yaml
 CV1:
      Analog input for Comparator 1 in the range of -5V to +5V.
