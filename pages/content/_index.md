@@ -39,7 +39,7 @@ hardware peripherials to make it easy to interact with and add behavior
 to them. The library tries not to make any assumptions about what the
 firmware can or should do.
 
-The Gravity firmware is a slightly different implementation of the original
+The Alt-Gravity firmware is a slightly different implementation of the original
 firmware. There are a few notable changes; the internal clock operates at
 96 PPQN instead of the original 24 PPQN, which allows for more granular
 quantization of features like duty cycle (pulse width) or offset.
@@ -154,10 +154,10 @@ This is a beta release which may contain bugs, or have room for improvement.
 Your feedback is crutial to help ensure the new firmware is well received when
 it is officially published. We need your help to make this a success!
 
-You can help by submitting Gitea issues [here](https://git.sitkainstruments.com/awonak/libGravity/issues)
+You can help by submitting Gitea issues [here](https://github.com/awonak/alt-gravity/issues)
 for bug reports, feedback, or any ideas you've got. 
 
-https://git.sitkainstruments.com/awonak/libGravity/issues
+https://github.com/awonak/alt-gravity/issues
 
 If you don't want to submit feedback on the public Gitea site, feel free to
 shoot me an email at adam.wonak@gmail.com.
