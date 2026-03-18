@@ -147,8 +147,46 @@ CH 6 (Flip-Flop Logic):
 
 ```
 
+## Parametric Rhythm
 
-## Feedback
+The Parametric Rhythm firmware is an alternative sequencer for the Gravity
+module that generates complex drum patterns by traversing 2D interpolation
+density maps, similar to Mutable Instruments Grids. The dual CV inputs can
+be assigned globally to dynamically modulate Kick, Snare, or HiHat densities,
+the amount of generated Chaos, or the X/Y interpolation positions in real-time.
+CV can also be routed to completely alter the selected pattern preset A-E. 
+
+It includes an intuitive menu system accessible via the encoder and buttons, 
+allowing control over playback, clock routing, external sync, pulse out
+subdivisions, and saving/loading pattern density settings natively to the
+hardware EEPROM. Press and hold the encoder button and rotate to select
+different pattern presets.
+
+{{< youtube 6aIP3p6gWdI >}}
+
+```yaml
+ENCODER: 
+     Press: change between selecting a parameter and editing the parameter value.
+     Hold & Rotate: change between the Global Settings menu and Pattern Presets A-E.
+
+BTN1 (PLAY): 
+     Play/pause: start or stop the internal clock and reset output gates.
+
+BTN2 (SHIFT): 
+     Reset: sets all gates low and returns the sequencer back to the first step.
+
+EXT: 
+     External clock input. Advances the sequencer by the selected PPQN amount. When
+     Gravity is set to INTERNAL or MIDI clock source, this input is instead used as
+     an external sequencer reset.
+
+CV1 & CV2: 
+     External analog inputs used to provide real-time modulation to any pattern 
+     parameter, or dynamically jump between loaded pattern preset slots A-E.
+
+```
+
+# Feedback
 
 This is a beta release which may contain bugs, or have room for improvement.
 Your feedback is crutial to help ensure the new firmware is well received when
