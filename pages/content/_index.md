@@ -110,10 +110,12 @@ The module provides six distinct logic outputs based on the voltage
 windows: individual Gates for each comparator, combined boolean logic
 (AND, OR, XOR), and a Flip-Flop state. 
 
-Additionally, when pressing both buttons, the module enters CV calibration mode
-for improving the accuracy of the input's voltage tracking. Exiting calibration
-mode automatically saves your calibration settings and will persist across power
-cycles.
+Additionally, press rotate the encoder to toggle between Comparator, Settings,
+and CV Calibration modes. Setting menu allows changing encoder direction and
+parameters for increasing cv accuracy. Turn off hystresis and cv display for
+audio rate cv input. CV calibration mode for improving the accuracy of the
+input's voltage tracking. Exiting calibration mode automatically saves your
+calibration settings and will persist across power cycles.
 
 {{< youtube eGmMma-BIGo >}}
 
