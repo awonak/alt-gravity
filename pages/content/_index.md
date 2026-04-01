@@ -120,6 +120,9 @@ calibration settings and will persist across power cycles.
 {{< youtube eGmMma-BIGo >}}
 
 ```yaml
+ENCODER:
+     Press: edit the currently selected parameter.
+     Hold & Rotate: switch between comparator, settings and calibration mode.
 CV1:
      Analog input for Comparator 1 in the range of -5V to +5V.
 CV2:
@@ -187,6 +190,14 @@ CV1 & CV2:
      parameter, or dynamically jump between loaded pattern preset slots A-E.
 
 ```
+
+# FAQ
+
+### My computer does not recognize the Arduino when I connect the USB cable
+Some Arduino clones require older CH340 drivers to communicate with the serial port. Follow these instructions: (https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all)
+
+### All 3 lights on the back of the Arduino are lit up - RX, TX, and POW - and it's not doing anything at all
+Unfortunately this means that the Arduino is bricked. Some of the cheap Arduino clones do not have reverse voltage protection, and will damage the Arduino if any modules in the case have the power connector reversed.
 
 # Feedback
 
