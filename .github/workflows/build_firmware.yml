@@ -1,0 +1,48 @@
+name: Build and release
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  # Workflow executes on symantic version tag
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+jobs:
+  build_firmware:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        firmware: ["Comparator", "Euclidean", "Gravity"]
+        board: ["arduino:avr:nano", "arduino:avr:nano:cpu=atmega328old"]
+        include:
+          - board: arduino:avr:nano
+            boardpath: nano
+          - board: arduino:avr:nano:cpu=atmega328old
+            boardpath: nanoOldBootloader
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Arduino CLI
+        uses: arduino/setup-arduino-cli@v2
+        
+      - name: Install Arduino platform and libraries
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+          arduino-cli config init
+          arduino-cli config set library.enable_unsafe_install true
+          arduino-cli lib install "RotaryEncoder"
+          arduino-cli lib install "U8g2"
+          
+      - name: Install libGravity
+        run: |
+          mkdir -p ~/Arduino/libraries
+          ln -s ${{ github.workspace }}/libGravity ~/Arduino/libraries/libGravity
+          
+      - name: Compile
+        run: |
+          arduino-cli compile -v -b ${{ matrix.board }} ./libGravity/firmware/${{ matrix.firmware }}/${{ matrix.firmware }}.ino -e --output-dir=./build/${{ matrix.firmware }}-${{ matrix.boardpath }}
